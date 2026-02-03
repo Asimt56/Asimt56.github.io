@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Asim Yaqoob | Aerospace Propulsion Log</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hud-grid {
+            background-image: radial-gradient(#0ea5e9 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(200%); }
+        }
+        .scanline {
+            animation: scan 3s linear infinite;
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0ea5e9;
+            border-radius: 10px;
+        }
+        .profile-image {
+            object-position: top center;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+	<!-- Primary Meta Tags -->
+<meta name="title" content="Muhammad Asim Yaqoob | Aerospace Propulsion Specialist">
+<meta name="description" content="Senior Technician with 15+ years of experience in C-130 T-56 Engine and 54H60 Propeller Overhauling. Currently at SAMI.">
+
+<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://your-domain-here.com/">
+<meta property="og:title" content="Muhammad Asim Yaqoob | Aerospace Propulsion Specialist">
+<meta property="og:description" content="Expert in C-130 Engine & Propeller Maintenance. 15+ years of meritorious aerospace service.">
+<meta property="og:image" content="https://api.clarkia.ai/api/v1/storage/e3690d79-6610-4447-9e4a-5f56b69b828b/artifacts/33979493/data/f67e21a2-ec7a-42c2-841f-81e83896dfa2.jpeg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://your-domain-here.com/">
+<meta property="twitter:title" content="Muhammad Asim Yaqoob | Aerospace Propulsion Specialist">
+<meta property="twitter:description" content="Expert in C-130 Engine & Propeller Maintenance. 15+ years of meritorious aerospace service.">
+<meta property="twitter:image" content="https://api.clarkia.ai/api/v1/storage/e3690d79-6610-4447-9e4a-5f56b69b828b/artifacts/33979493/data/f67e21a2-ec7a-42c2-841f-81e83896dfa2.jpeg">
+
+<!-- Theme Color for Mobile Browsers -->
+<meta name="theme-color" content="#0ea5e9">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200">
+
+    <!-- HUD Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md border-b bg-white/80 border-slate-200 dark:bg-slate-950/80 dark:border-slate-800 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center text-white animate-[spin_4s_linear_infinite] shadow-lg shadow-sky-500/40">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"/><path d="M12 12v.01"/></svg>
+            </div>
+            <span class="font-bold text-xl tracking-tighter uppercase hidden sm:block font-orbitron">
+                Asim Yaqoob
+            </span>
+        </div>
+        
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex gap-8 text-xs font-bold tracking-widest font-orbitron">
+                <a href="#debrief" class="hover:text-sky-500 transition-colors relative group">DEBRIEF<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 transition-all group-hover:w-full"></span></a>
+                <a href="#flightlog" class="hover:text-sky-500 transition-colors relative group">FLIGHT LOG<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 transition-all group-hover:w-full"></span></a>
+                <a href="#systems" class="hover:text-sky-500 transition-colors relative group">SYSTEMS<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 transition-all group-hover:w-full"></span></a>
+                <a href="#comms" class="hover:text-sky-500 transition-colors relative group">COMMS<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 transition-all group-hover:w-full"></span></a>
+            </div>
+            <button id="themeToggle" class="p-2 rounded-full transition-colors hover:bg-slate-200 dark:hover:bg-slate-800">
+                <span id="themeIcon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="debrief" class="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none hud-grid"></div>
+        
+        <div class="container mx-auto px-6 z-10 flex flex-col items-center text-center">
+            <!-- Updated Profile Picture from Upload -->
+            <div class="relative mb-10">
+                <div class="absolute -inset-4 border-2 border-sky-500/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
+                <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-sky-500 shadow-2xl shadow-sky-500/20 group">
+                    <img src="asim.jpeg" alt="Muhammad Asim Yaqoob" class="w-full h-full object-cover profile-image transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-sky-500/10 to-transparent h-1/2 w-full scanline pointer-events-none"></div>
+                </div>
+            </div>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-bold tracking-widest mb-6 animate-pulse font-orbitron">
+                <div class="w-2 h-2 rounded-full bg-sky-500"></div>
+                SENIOR TECHNICIAN | T-56 & 54H60 SPECIALIST
+            </div>
+            
+            <h1 class="text-4xl md:text-7xl font-black mb-6 tracking-tight leading-none uppercase font-orbitron">
+                MUHAMMAD<br /><span class="text-sky-500">ASIM YAQOOB</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-lg md:text-xl opacity-70 mb-10 font-light leading-relaxed">
+                Rendered up to 15 years meritorious service. Specialist in C-130 Platform Maintenance, Engine & Propeller Overhauling, and Hot Section Bore Scope Inspections.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#comms" class="px-10 py-4 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-sm transition-all transform hover:-translate-y-1 shadow-xl shadow-sky-600/20 font-orbitron">
+                    CONTACT CONTROL
+                </a>
+                <button onclick="window.print()" class="px-10 py-4 border-2 border-sky-600 text-sky-600 font-bold rounded-sm hover:bg-sky-600/10 transition-all font-orbitron">
+                    EXPORT LOGBOOK
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flight Log (Experience) -->
+    <main class="container mx-auto px-6 py-20">
+        <section id="flightlog" class="mb-40">
+            <div class="flex items-center gap-4 mb-16">
+                <h2 class="text-3xl font-bold tracking-tighter font-orbitron">FLIGHT LOG (EXPERIENCE)</h2>
+                <div class="h-[2px] flex-grow bg-sky-500/20"></div>
+            </div>
+
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 md:before:mx-auto before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-sky-500 before:to-transparent">
+                
+                <!-- SAMI -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-sky-500 bg-slate-950 text-sky-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold italic">S</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border transition-all bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 hover:border-sky-500/50">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <time class="text-xs font-bold text-sky-500 tracking-widest font-orbitron">2024 — PRESENT</time>
+                            <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500 text-white font-bold">ACTIVE MISSION</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Senior Technician Engine & Propeller</h3>
+                        <p class="text-sky-500 font-semibold mb-4 text-sm">Saudi Arabian Military Industry (SAMI)</p>
+                        <ul class="space-y-2 opacity-70 text-sm">
+                            <li>▹ Organizational Level Maintenance, Repair, and Overhauling.</li>
+                            <li>▹ Depot Level Maintenance of 54H60-91/117 Propellers.</li>
+                            <li>▹ Component assembling, testing, and functional verification.</li>
+                            <li>▹ Troubleshooting I & O level defects and rectification.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GDC Middle East -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-sky-500 bg-slate-950 text-sky-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold italic">G</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border transition-all bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 hover:border-sky-500/50">
+                        <div class="mb-4"><time class="text-xs font-bold text-sky-500 tracking-widest font-orbitron">2021 — 2024</time></div>
+                        <h3 class="text-xl font-bold mb-1">General Maintenance Technician</h3>
+                        <p class="text-sky-500 font-semibold mb-4 text-sm">GDC Middle East Aerospace Engineering</p>
+                        <ul class="space-y-2 opacity-70 text-sm">
+                            <li>▹ Maintenance for V.I.P Medical Aircraft.</li>
+                            <li>▹ 1st & 2nd Line Maintenance of C-130H Aircraft.</li>
+                            <li>▹ Removal and Installation of QEC Gear Box & turbine assemblies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SAEI -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-sky-500 bg-slate-950 text-sky-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold italic">S</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border transition-all bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 hover:border-sky-500/50">
+                        <div class="mb-4"><time class="text-xs font-bold text-sky-500 tracking-widest font-orbitron">2016 — 2021</time></div>
+                        <h3 class="text-xl font-bold mb-1">Qualified A&P Mechanic (C-130)</h3>
+                        <p class="text-sky-500 font-semibold mb-4 text-sm">Saudi Aerospace Engineering Industries (SAEI)</p>
+                        <ul class="space-y-2 opacity-70 text-sm">
+                            <li>▹ Programmed Depot Maintenance (PDM) of C-130H Aircraft.</li>
+                            <li>▹ Organizational & Shop Level Maintenance.</li>
+                            <li>▹ Expert removal and installation of Engine & Propeller units.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PAF / PAC -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-sky-500 bg-slate-950 text-sky-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold italic">P</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border transition-all bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 hover:border-sky-500/50">
+                        <div class="mb-4"><time class="text-xs font-bold text-sky-500 tracking-widest font-orbitron">2009 — 2016</time></div>
+                        <h3 class="text-xl font-bold mb-1">Engine & Propeller Technician</h3>
+                        <p class="text-sky-500 font-semibold mb-4 text-sm">Pakistan Air Force / PAC Kamra</p>
+                        <ul class="space-y-2 opacity-70 text-sm">
+                            <li>▹ Periodic (ISO) Inspection and Hot Section Bore Scope Inspection.</li>
+                            <li>▹ Static and dynamic balancing of engine rotating parts.</li>
+                            <li>▹ Depot Level Maintenance of 54H60 Propeller assemblies.</li>
+                            <li>▹ Complete assembly of compressor, turbine, and RGB units.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Systems & Courses -->
+        <section id="systems" class="mb-40 grid lg:grid-cols-2 gap-20">
+            <div>
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-3xl font-bold tracking-tighter font-orbitron">TECHNICAL MASTERY</h2>
+                    <div class="h-[2px] flex-grow bg-sky-500/20"></div>
+                </div>
+                <div class="space-y-8">
+                    <div class="group">
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold tracking-wider group-hover:text-sky-500 transition-colors uppercase">T-56-A-15/D22 Engine Overhaul</span>
+                            <span class="text-xs text-sky-500 font-bold">EXPERT</span>
+                        </div>
+                        <div class="w-full h-2 bg-sky-500/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-sky-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold tracking-wider group-hover:text-sky-500 transition-colors uppercase">54H60-91/117 Propeller Overhaul</span>
+                            <span class="text-xs text-sky-500 font-bold">DEPOT LEVEL</span>
+                        </div>
+                        <div class="w-full h-2 bg-sky-500/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-sky-500 rounded-full w-[98%]"></div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold tracking-wider group-hover:text-sky-500 transition-colors uppercase">Bore Scope Inspection</span>
+                            <span class="text-xs text-sky-500 font-bold">QUALIFIED</span>
+                        </div>
+                        <div class="w-full h-2 bg-sky-500/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-sky-500 rounded-full w-[95%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-3xl font-bold tracking-tighter font-orbitron">PROFESSIONAL COURSES</h2>
+                    <div class="h-[2px] flex-grow bg-sky-500/20"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-lg border bg-white dark:bg-slate-900/30 border-slate-100 dark:border-slate-800 hover:border-sky-500/50 transition-colors">
+                        <div class="text-sky-500 text-xs font-bold mb-1">SKF</div>
+                        <div class="font-bold text-xs uppercase">Bearing Technology</div>
+                    </div>
+                    <div class="p-4 rounded-lg border bg-white dark:bg-slate-900/30 border-slate-100 dark:border-slate-800 hover:border-sky-500/50 transition-colors">
+                        <div class="text-sky-500 text-xs font-bold mb-1">SPECIALIZED</div>
+                        <div class="font-bold text-xs uppercase">Static & Dynamic Balancing</div>
+                    </div>
+                    <div class="p-4 rounded-lg border bg-white dark:bg-slate-900/30 border-slate-100 dark:border-slate-800 hover:border-sky-500/50 transition-colors">
+                        <div class="text-sky-500 text-xs font-bold mb-1">QEC</div>
+                        <div class="font-bold text-xs uppercase">Quick Engine Change</div>
+                    </div>
+                    <div class="p-4 rounded-lg border bg-white dark:bg-slate-900/30 border-slate-100 dark:border-slate-800 hover:border-sky-500/50 transition-colors">
+                        <div class="text-sky-500 text-xs font-bold mb-1">SAFETY</div>
+                        <div class="font-bold text-xs uppercase">Environment & Equipment Safety</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Skills -->
+        <section class="mb-40 grid md:grid-cols-3 gap-12">
+             <div class="md:col-span-1">
+                <h3 class="text-xl font-bold font-orbitron mb-6 text-sky-500">EDUCATION</h3>
+                <div class="p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <div class="font-bold">Diploma of Associate Engineer (DAE)</div>
+                    <div class="text-sm opacity-60">Mechanical Technology (3 Years)</div>
+                </div>
+            </div>
+            <div class="md:col-span-1">
+                <h3 class="text-xl font-bold font-orbitron mb-6 text-sky-500">LANGUAGES</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between font-bold"><span>English</span><span class="text-sky-500">Professional</span></div>
+                    <div class="flex items-center justify-between font-bold"><span>Arabic</span><span class="text-sky-500">Fluent</span></div>
+                    <div class="flex items-center justify-between font-bold"><span>Urdu</span><span class="text-sky-500">Native</span></div>
+                </div>
+            </div>
+            <div class="md:col-span-1">
+                <h3 class="text-xl font-bold font-orbitron mb-6 text-sky-500">EQUIPMENT OPS</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded text-[10px] font-bold">VACUUM FURNACE</span>
+                    <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded text-[10px] font-bold">HYDRAULIC PRESS</span>
+                    <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded text-[10px] font-bold">OVERHEAD CRANE</span>
+                    <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded text-[10px] font-bold">BALANCING MACHINE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comms -->
+        <section id="comms" class="rounded-3xl p-12 md:p-20 text-center relative overflow-hidden border bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800">
+            <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tighter font-orbitron">ESTABLISH <span class="text-sky-500">COMMS</span></h2>
+            <p class="max-w-xl mx-auto opacity-60 mb-16 text-lg">Available for maintenance leadership and specialized aerospace technical roles.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div>
+                    <div class="text-sky-500 font-bold uppercase text-xs tracking-widest mb-2">Email Channel</div>
+                    <a href="mailto:asimt56@gmail.com" class="text-lg font-bold hover:text-sky-500 transition-colors">asimt56@gmail.com</a>
+                </div>
+                <div>
+                    <div class="text-sky-500 font-bold uppercase text-xs tracking-widest mb-2">Secure Line</div>
+                    <a href="tel:+966550820339" class="text-lg font-bold hover:text-sky-500 transition-colors">+966 550820339</a>
+                </div>
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="text-sky-500 font-bold uppercase text-xs tracking-widest mb-2">Stationed At</div>
+                    <div class="text-lg font-bold">Jeddah, Saudi Arabia</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pb-20 pt-10 text-center border-t border-slate-200 dark:border-slate-800">
+        <div class="opacity-30 text-[10px] font-bold tracking-[0.4em] uppercase font-orbitron">
+            &copy; 2026 MUHAMMAD ASIM YAQOOB | AEROSPACE PROPULSION LOG
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggling Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
+        const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`;
+
+        function updateIcon() {
+            themeIcon.innerHTML = html.classList.contains('dark') ? sunIcon : moonIcon;
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            updateIcon();
+        });
+
+        if (localStorage.getItem('theme') === 'light') {
+            html.classList.remove('dark');
+        } else {
+            html.classList.add('dark');
+        }
+        updateIcon();
+
+        // Reveal animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .p-6, #systems > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
